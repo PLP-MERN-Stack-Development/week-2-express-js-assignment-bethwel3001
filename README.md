@@ -1,63 +1,88 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19705510&assignment_repo_type=AssignmentRepo)
-# Express.js RESTful API Assignment
+# Express.js – Product API
 
-This assignment focuses on building a RESTful API using Express.js, implementing proper routing, middleware, and error handling.
+A RESTful API built with Express.js implementing standard CRUD operations, middleware, error handling, and advanced features like filtering and pagination.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up an Express.js server
-2. Create RESTful API routes for a product resource
-3. Implement custom middleware for logging, authentication, and validation
-4. Add comprehensive error handling
-5. Develop advanced features like filtering, pagination, and search
+## 🚀 Features
 
-## Getting Started
+- Full CRUD API for `products`
+- Custom middleware for:
+  - Logging
+  - JSON parsing
+  - API key authentication
+  - Input validation
+- Centralized error handling with custom error classes
+- Advanced routes for:
+  - Category filtering
+  - Pagination
+  - Search
+  - Product statistics
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Run the server:
-   ```
-   npm start
-   ```
+---
 
-## Files Included
+## 📦 Project Structure
+```bash
+week-2-express-js-assignment/
+├── server.js
+├── routes/
+│ └── products.js
+├── middleware/
+│ ├── auth.js
+│ ├── logger.js
+│ ├── validateProduct.js
+│ └── errorHandler.js
+├── utils/
+│ └── errors.js
+├── public/
+│ └── index.html (optional frontend)
+├── .env
+├── .env.example
+└── README.md
+```
+---
+## 🛠️ Getting Started
+### 1. Clone and Install Dependencies
 
-- `Week2-Assignment.md`: Detailed assignment instructions
-- `server.js`: Starter Express.js server file
-- `.env.example`: Example environment variables file
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/week-2-express-js-assignment-bethwel3001
+cd week-2-express-js-assignment
+npm install
+```
+### 2. Set Environment Variables
+Create a .env file in the root:
+```bash
+API_KEY=your_api_key_here
+PORT=3000
+```
+You can refer to .env.example.
 
-## Requirements
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Postman, Insomnia, or curl for API testing
+### 3. Run the Server
+```bash
+node server.js
+```
+The server will start at 
+```bash
+http://localhost:3000
+```
+### 4. Test the API
+# API Endpoints
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| GET | /api/products | Get all products |
+| GET | /api/products/:id | Get products by id |
+| POST | /products | Create a new product |
+| GET | /products/:id | Get a product by id |
+| PUT | /products/:id | Update a product by id |
+| DELETE | /products/:id | Delete a product by id |
 
-## API Endpoints
+# 🧪 Testing
+You can use:
 
-The API will have the following endpoints:
+Postman / Insomnia
 
-- `GET /api/products`: Get all products
-- `GET /api/products/:id`: Get a specific product
-- `POST /api/products`: Create a new product
-- `PUT /api/products/:id`: Update a product
-- `DELETE /api/products/:id`: Delete a product
+public/index.html (included frontend tester UI)
 
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete all the required API endpoints
-2. Implement the middleware and error handling
-3. Document your API in the README.md
-4. Include examples of requests and responses
-
-## Resources
-
-- [Express.js Documentation](https://expressjs.com/)
-- [RESTful API Design Best Practices](https://restfulapi.net/)
-- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+# 👨‍💻 Author
+Bethwel (GitHub Classroom Assignment)
